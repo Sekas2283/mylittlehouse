@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест о чае | 7-й Корпус ВятГУ</title>
+    <link rel="stylesheet" href="style_main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Kalam&display=swap" rel="stylesheet">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #FF9933;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #138808;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+            button:hover {
+                background-color: #0e6b0a;
+            }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .good {
+            background-color: #138808;
+            color: white;
+        }
+
+        .average {
+            background-color: #FF9933;
+            color: white;
+        }
+
+        .bad {
+            background-color: #CC0000;
+            color: white;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            background-color: #000080;
+        }
+
+            .back-button:hover {
+                background-color: #00005a;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-overlay">
+            <h1>Тест о чайных традициях</h1>
+            <p>Проверьте свои знания, полученные на главной странице</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#" class="active">Тест о чае</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="test-section">
+            <div class="container">
+                <div class="test-container">
+                    <h2>Тест: Что вы знаете о 7-ом корпусе?</h2>
+                    <p>Ответьте на вопросы, основанные на информации с главной страницы сайта</p>
+
+                    <form id="tea-test">
+                        <div class="question">
+                            <p>1. Какой чай рекомендуется в 7-м корпусе для употребления?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="q1" id="q1a" value="a">
+                                    <label for="q1a">Зеленый чай</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q1" id="q1b" value="b">
+                                    <label for="q1b">Чёрный чай</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q1" id="q1c" value="c">
+                                    <label for="q1c">Любой чай</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>2. Какой робот был упомянут на главной странице?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="q2" id="q2a" value="a">
+                                    <label for="q2a">Робот-пылесос</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q2" id="q2b" value="b">
+                                    <label for="q2b">Робот-бариста</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q2" id="q2c" value="c">
+                                    <label for="q2c">Робот-преподаватель</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>3. Какой стиль архитектуры 7-ого корпуса ВятГУ?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="q3" id="q3a" value="a">
+                                    <label for="q3a">Готический</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q3" id="q3b" value="b">
+                                    <label for="q3b">Византийский</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q3" id="q3c" value="c">
+                                    <label for="q3c">Хай-тек</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>4. Какое мероприятие проводится ежедневно перед занятиями в 7-м корпусе?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="q4" id="q4a" value="a">
+                                    <label for="q4a">Физкультурная разминка</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q4" id="q4b" value="b">
+                                    <label for="q4b">Групповая медитация</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q4" id="q4c" value="c">
+                                    <label for="q4c">Чтение мантр</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>5.  Какими студенты 7-ого корпуса выходят с пар?</p>
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="q5" id="q5a" value="a">
+                                    <label for="q5a">С хорошим настроением</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q5" id="q5b" value="b">
+                                    <label for="q5b">С плохим настроением</label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" name="q5" id="q5c" value="c">
+                                    <label for="q5c">Им вообще запрещено выходить из корпуса</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" onclick="checkTest()">Проверить ответы</button>
+                    </form>
+
+                    <div id="test-result" class="result"></div>
+
+                    <a href="index.html" class="back-button">Вернуться на главную</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Чайный тест 7-го Корпуса ВятГУ</p>
+            <p>Пейте чай и учитесь с удовольствием!</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkTest() {
+            const answers = {
+                q1: 'c', // Любой чай
+                q2: 'b', // Робот-бариста
+                q3: 'a', // Готический
+                q4: 'b', // Групповая медитация
+                q5: 'a'  // С хорошим настроением
+            };
+
+            let score = 0;
+            const form = document.getElementById('tea-test');
+            const resultDiv = document.getElementById('test-result');
+
+            // Проверяем каждый вопрос
+            for (let i = 1; i <= 5; i++) {
+                const questionName = 'q' + i;
+                const selectedOption = form.elements[questionName].value;
+
+                if (selectedOption === answers[questionName]) {
+                    score++;
+                }
+            }
+
+            // Показываем результат
+            resultDiv.style.display = 'block';
+
+            if (score === 5) {
+                resultDiv.className = 'result good';
+                resultDiv.innerHTML = `
+                        <h3>Превосходно! Вы набрали ${score} из 5!</h3>
+                        <p>Вы настоящий знаток чайных традиций 7-го корпуса!</p>
+                        <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" alt="Поздравляем" style="max-width: 200px;">
+                    `;
+            } else if (score >= 3) {
+                resultDiv.className = 'result average';
+                resultDiv.innerHTML = `
+                        <h3>Хорошо! Вы набрали ${score} из 5!</h3>
+                        <p>Вы неплохо знаете чайные традиции, но есть куда расти!</p>
+                    `;
+            } else {
+                resultDiv.className = 'result bad';
+                resultDiv.innerHTML = `
+                        <h3>Попробуйте еще раз! Вы набрали ${score} из 5.</h3>
+                        <p>Рекомендуем посетить главную страницу и изучить материалы внимательнее.</p>
+                        <a href="index.html" style="color: white; text-decoration: underline;">Вернуться на главную</a>
+                    `;
+            }
+
+            // Прокручиваем к результату
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
